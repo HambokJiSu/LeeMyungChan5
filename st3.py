@@ -38,7 +38,7 @@ def plot_advanced_sunspot_visualizations(df, sunactivity_col='SUNACTIVITY',
         xs = np.linspace(data.min(), data.max(), 200)
         density = gaussian_kde(data)
 
-        '''코드를 작성하시오'''
+        
         axs[0, 1].hist(data, bins=hist_bins, density=True, alpha=0.6, color='gray', label='Histogram')
         
         axs[0, 1].plot(xs, density(xs), color='red', linewidth=2, label='Density')
@@ -52,7 +52,7 @@ def plot_advanced_sunspot_visualizations(df, sunactivity_col='SUNACTIVITY',
     try:
         df_20th = df.loc["1900":"2000"]
         if not df_20th.empty:
-            '''코드를 작성하시오'''
+            
             axs[1, 0].boxplot(df_20th[sunactivity_col], vert=False)
 
     except:
@@ -98,12 +98,12 @@ try:
     df = load_data('data/sunspots.csv')
 
     # 사이드바에 파라미터 조절 슬라이더 추가
-    '''코드를 작성하시오'''
+    
     year_min = int(df['YEAR'].min())
     year_max = int(df['YEAR'].max())
     
     # 연도 범위 선택
-    '''코드를 작성하시오'''
+    
     year_range = st.sidebar.slider(
         '연도 범위 선택',
         min_value=year_min,
@@ -128,7 +128,7 @@ try:
     )
 
     # 산점도 점 크기 조절
-    '''코드를 작성하시오'''
+    
     point_size = st.sidebar.slider(
         '산점도 점 크기',
         min_value=1,
@@ -137,7 +137,7 @@ try:
     )
 
     # 산점도 투명도 조절
-    '''코드를 작성하시오'''
+    
     point_alpha = st.sidebar.slider(
         '산점도 투명도',
         min_value=0.0,
