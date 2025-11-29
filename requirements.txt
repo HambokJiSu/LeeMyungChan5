@@ -5,3 +5,6 @@ matplotlib
 scipy
 prophet
 statsmodels
+scikit-learn
+xgboost
+lightgbm
